@@ -10,6 +10,7 @@ class AuthorResource(ModelResource):
         queryset = User.objects.all()
         resource_name = 'author'
         excludes = ['email', 'password', 'is_active', 'is_staff', 'is_superuser']
+        allowed_methods = ['get']
 
 
 class PostResource(ModelResource):
